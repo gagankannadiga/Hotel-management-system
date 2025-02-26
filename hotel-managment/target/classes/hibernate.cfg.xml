@@ -1,0 +1,28 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hotel</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Hibernate dialect for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Format SQL -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Hibernate schema generation -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entity mappings -->
+        <mapping class="hotel_mgnt_entity.User"/>
+        <mapping class="hotel_mgnt_entity.Room"/>
+        <mapping class="hotel_mgnt_entity.Booking"/>
+        <mapping class="hotel_mgnt_entity.Payment"/>
+        
+    </session-factory>
+</hibernate-configuration>
